@@ -113,7 +113,7 @@ class BaHandle(BaseHandle[BaChar]):
 
     async def _update_info(self):
         info = {}
-        url = "https://lonqie.github.io/SchaleDB/data/cn/students.min.json?v=49"
+        url = "https://github.com/lonqie/SchaleDB/blob/main/data/cn/students.min.json"
         result = (await AsyncHttpx.get(url)).json()
         if not result:
             logger.warning(f"更新 {self.game_name_cn} 出错")
